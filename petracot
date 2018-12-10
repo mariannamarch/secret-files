@@ -28,3 +28,14 @@ for word in dictwords:
     if len(word) % 2 == 1:
         if word[(len(word)-1)//2] == 'й':
             print(word)
+
+
+
+#TASK 2
+znak = []
+nuznoe = []
+for line in text:
+    words, definition, other = line.split('|', maxsplit = 2)
+    definition = punct(definition).split()
+    if len(definition) >= 30:
+        print(line)
