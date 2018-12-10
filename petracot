@@ -12,3 +12,19 @@ for word in slova:
     if len(word) % 2 == 1:
         if word[(len(word)-1)//2] == 'й':
             print(word)
+
+
+
+так норм?
+
+#Task 1
+with open('Ozhegov.txt', encoding= 'utf-8') as f:
+    text = f.readlines()
+dictwords = []
+for line in text:
+    words, other = line.split('|', maxsplit = 1)
+    dictwords.append(words)
+for word in dictwords:
+    if len(word) % 2 == 1:
+        if word[(len(word)-1)//2] == 'й':
+            print(word)
