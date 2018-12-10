@@ -36,7 +36,10 @@ znak = []
 nuznoe = []
 for line in text:
     words, definition, other = line.split('|', maxsplit = 2)
-    definition = punct(definition).split()
+    definition = definition.split()
     if len(definition) >= 30:
         print(line)
 NameError: name 'punct' is not defined
+
+
+punct - моя функция убери её, кароч вот так как я изменил будет
