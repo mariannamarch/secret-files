@@ -39,3 +39,4 @@ for line in text:
     definition = punct(definition).split()
     if len(definition) >= 30:
         print(line)
+NameError: name 'punct' is not defined
