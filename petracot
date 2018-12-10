@@ -1,2 +1,14 @@
 blyat che delat?
 send help 
+
+
+with open('Ozhegov.txt', encoding='utf-8') as f:
+    text = f.readlines()
+slova = []
+for line in text:
+    words, other = line.split('|', maxsplit = 1)
+    slova.append(words)
+for word in slova:
+    if len(word) % 2 == 1:
+        if word[(len(word)-1)//2] == 'й':
+            print(word)
