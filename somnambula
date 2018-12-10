@@ -1,1 +1,17 @@
-
+#TASK 3
+examples = []
+counter = 0
+while True:
+    vvod = input('введите слово или нажмите Enter, если устали ').lower()
+    if vvod != '':
+        for line in text:
+            words, definition, example = punct(line).split('|', maxsplit = 2)
+            examples.append(example.lower())
+            if vvod in punct(example.lower()).split():
+                print(words)
+                counter = 1
+        if counter != 1:
+            print ('нет статей')
+        counter = 0
+    else:
+        break
